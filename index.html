@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inicial scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Formulario de dados</title>
+  </head>
+
+  <body>
+    <main class="container">
+      <form>
+        <h1 id="titulo">Formulário de Cadastro de Dados</h1>
+
+
+        <section>
+          <div class="campo">
+            <label for="nome" class="required">Nome*</label>
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required>
+          </div>
+
+          <div class="campo">
+            <label for="cpf" class="required">CPF*</label>
+            <input type="text" name="cpf" id="cpf" placeholder="Apenas números" maxlength="11"
+            required>
+          </div>
+        </section>
+
+        <section>
+          <div class="campo">
+            <label for="rg">RG</label>
+            <input type="text" name="rg" id="rg" placeholder="Apenas números" maxlength="9">
+          </div>
+
+          <div class="campo">
+            <label for="data">Data de Nascimento</label>
+            <input type="date" name="data" id="data" placeholder="dd/mm/aaaa" maxlength="10">
+          </div>
+
+          <div class="campo">
+            <label>Gênero</label>
+            <select id="genero">
+              <option selected disabled value="">Selecione</option>
+              <option>Feminino</option>
+              <option>Masculino</option>
+            </select>
+          </div>
+        </section>
+
+        <section>
+          <div class="campo">
+            <label for="cep">CEP</label>
+            <input type="text" name="cep" id="cep" placeholder="Coloque apenas números" maxlength="9" 
+            >
+          </div>
+
+          <div class="campo">
+            <label for="endereco" class="required">Endereço*</label>
+            <input type="text" name="endereco" id="endereco" placeholder="Rua, Avenida..." required>
+          </div>
+        </section>
+
+        <section>
+          <div class="campo">
+            <label for="numero" class="required">Número*</label>
+            <input type="text" name="numero" id="numero" placeholder="Número da Residência" required>
+          </div>
+
+          <div class="campo">
+            <label for="bairro">Bairro</label>
+            <input type="text" name="bairro" id="bairro" placeholder="Digite o seu bairro">
+          </div>
+
+        </section>
+
+        <section>
+          <div class="campo">
+            <label for="cidade">Cidade</label>
+            <input type="text" name="cidade" id="cidade" placeholder="Qual cidade você reside?">
+          </div>
+
+          <div class="campo">
+            <label>Estado</label>
+            <select id="estado">
+              <option selected disabled value="">Selecione</option>
+              <option>AC</option>
+              <option>AL</option>
+              <option>AP</option>
+              <option>AM</option>
+              <option>BA</option>
+              <option>CE</option>
+              <option>DF</option>
+              <option>ES</option>
+              <option>GO</option>
+              <option>MA</option>
+              <option>MG</option>
+              <option>MT</option>
+              <option>MS</option>
+              <option>PA</option>
+              <option>PB</option>
+              <option>PE</option>
+              <option>PI</option>
+              <option>PR</option>
+              <option>RJ</option>
+              <option>RN</option>
+              <option>RO</option>
+              <option>RR</option>
+              <option>RS</option>
+              <option>SC</option>
+              <option>SE</option>
+              <option>SP</option>
+              <option>TO</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="email" class="required">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="Digite o seu e-mail" required>
+          </div>
+        </section>
+
+        <section>
+          <div class="campo">
+            <label for="fixo">Telefone Fixo</label>
+            <input type="text" name="fixo" id="fixo" placeholder="(00) 0000-0000" maxlength="14" 
+            onkeypress="configuracaofixo()">
+          </div>
+
+          <div class="campo">
+            <label for="celular" class="required">Telefone Celular*</label>
+            <input type="text" name="celular" id="celular" placeholder="(00) 00000-0000" maxlength="15" 
+            onkeypress="configuracaocelular()" required>
+          </div>
+        </section></br>
+
+        <button type="submit" id="botao" onclick="enviar()">Enviar Dados</button>
+
+      </form>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
